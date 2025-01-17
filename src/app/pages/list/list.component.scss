@@ -1,0 +1,13 @@
+@import "../../../../style/_mixins";
+@import "../../../../style/_variables";
+
+:host {
+    height: 100vh;
+    width: 100%;
+}
+
+.list {
+    height: 100vh;
+    width: 100%;
+    background-color: $black;
+}
