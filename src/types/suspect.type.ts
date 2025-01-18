@@ -1,4 +1,5 @@
+import { Evidence } from './evidence.type';
+
 export type Suspect = {
-    name: string,
-    color: string
-}
+  color: string;
+} & Evidence;

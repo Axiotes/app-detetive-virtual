@@ -6,6 +6,7 @@ import { WEAPONS } from '../../../../data/weapons.mock';
 import { LOCATIONS } from '../../../../data/locations.mock';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
+import { Evidence } from '../../../types/evidence.type';
 
 @Component({
   selector: 'app-list',
@@ -16,8 +17,8 @@ import { Router } from '@angular/router';
 })
 export class ListComponent {
   public suspects: Suspect[] = SUSPECTS;
-  public weapons: string[] = WEAPONS;
-  public locations: string[] = LOCATIONS;
+  public weapons: Evidence[] = WEAPONS;
+  public locations: Evidence[] = LOCATIONS;
 
   constructor(private router: Router) {}
 
