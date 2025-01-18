@@ -1,11 +1,15 @@
-import { Suspect } from '../types/suspect.type';
+import { Evidence } from '../src/types/evidence.type';
 
-export const SUSPECTS: Suspect[] = [
-  { name: 'Sargento - Bigode', color: 'Peão Amarelo' },
-  { name: 'Florista - Dona Branca', color: 'Peão Branco' },
-  { name: 'Chef de cozinha - Tony Gourmet', color: 'Peão Marrom' },
-  { name: 'Mordomo - James', color: 'Peão Azul' },
-  { name: 'Médica - Dona Violeta', color: 'Peão Rosa' },
-  { name: 'Coveiro - Sérgio Soturno', color: 'Peão Preto' },
-  { name: 'Advogado - Sr. Marinho', color: 'Peão Verde' },
+export const SUSPECTS: Evidence[] = [
+  { name: 'Sargento - Bigode', details: 'Peão Amarelo', checked: false },
+  { name: 'Florista - Dona Branca', details: 'Peão Branco', checked: false },
+  {
+    name: 'Chef de cozinha - Tony Gourmet',
+    details: 'Peão Marrom',
+    checked: false,
+  },
+  { name: 'Mordomo - James', details: 'Peão Azul', checked: false },
+  { name: 'Médica - Dona Violeta', details: 'Peão Rosa', checked: false },
+  { name: 'Coveiro - Sérgio Soturno', details: 'Peão Preto', checked: false },
+  { name: 'Advogado - Sr. Marinho', details: 'Peão Verde', checked: false },
 ];

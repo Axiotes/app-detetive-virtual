@@ -1,0 +1,20 @@
+<main class="guess">
+  <div class="guess__infos">
+    <i-lucide
+      class="guess__infos__icon"
+      [img]="arrow"
+      [size]="30"
+      (click)="back()"
+    ></i-lucide>
+    <h1 class="guess" [innerHTML]="title"></h1>
+    <div class="guess__infos__options">
+      <app-option
+        *ngFor="let option of options"
+        [name]="option.name"
+        [details]="option.details"
+        [checked]="option.checked"
+      ></app-option>
+    </div>
+  </div>
+  <button class="guess__button" (click)="next()">Próximo</button>
+</main>

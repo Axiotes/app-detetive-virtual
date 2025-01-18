@@ -10,6 +10,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class OptionComponent {
   @Input() public name!: string;
-  @Input() public details!: string;
-  @Input() public checked: boolean = false;
+  @Input() public details?: string;
+  @Input() public checked!: boolean;
 }
