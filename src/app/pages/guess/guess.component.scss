@@ -11,7 +11,7 @@
 
   &__infos {
     width: 100%;
-    @include flex-center(column, 15px);
+    @include flex-center(column, 10px);
     align-items: start;
 
     &__icon {
@@ -32,7 +32,7 @@
 
     &__options {
       width: 100%;
-      @include flex-center(column, 10px);
+      @include flex-center(column, 5px);
       align-items: start;
     }
   }
