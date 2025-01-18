@@ -5,6 +5,7 @@ import { WEAPONS } from '../../../../data/weapons.mock';
 import { LOCATIONS } from '../../../../data/locations.mock';
 import { OptionComponent } from '../../components/option/option.component';
 import { NgFor } from '@angular/common';
+import { Evidence } from '../../../types/evidence.type';
 
 @Component({
   selector: 'app-guess',
@@ -14,7 +15,7 @@ import { NgFor } from '@angular/common';
   styleUrl: './guess.component.scss',
 })
 export class GuessComponent implements OnInit {
-  public options!: any;
+  public options!: Evidence[];
   public title!: string;
 
   constructor(private ActivatedRoute: ActivatedRoute) {}

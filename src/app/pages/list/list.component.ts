@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { OptionComponent } from '../../components/option/option.component';
-import { Suspect } from '../../../types/suspect.type';
 import { SUSPECTS } from '../../../../data/suspects.mock';
 import { WEAPONS } from '../../../../data/weapons.mock';
 import { LOCATIONS } from '../../../../data/locations.mock';
@@ -16,7 +15,7 @@ import { Evidence } from '../../../types/evidence.type';
   styleUrl: './list.component.scss',
 })
 export class ListComponent {
-  public suspects: Suspect[] = SUSPECTS;
+  public suspects: Evidence[] = SUSPECTS;
   public weapons: Evidence[] = WEAPONS;
   public locations: Evidence[] = LOCATIONS;
 
