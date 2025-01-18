@@ -13,6 +13,7 @@
         [name]="option.name"
         [details]="option.details"
         [checked]="option.checked"
+        (selectOption)="selectOption($event)"
       ></app-option>
     </div>
   </div>

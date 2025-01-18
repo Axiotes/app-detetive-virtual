@@ -17,40 +17,46 @@ import { LucideIconData } from 'lucide-angular/icons/types';
   styleUrl: './guess.component.scss',
 })
 export class GuessComponent implements OnInit {
+  public evidence!: string;
+
   public options!: Evidence[];
   public title!: string;
   public lastRoute!: string;
   public nextRoute!: string;
 
-  public evidences: { [key: string]: () => void } = {
-    suspect: () => {
-      this.options = SUSPECTS;
-      this.title = 'Selecione um Suspeito';
-      this.lastRoute = 'list';
-      this.nextRoute = 'guess/weapon';
-    },
-    weapon: () => {
-      this.options = WEAPONS;
-      this.title = 'Selecione uma Arma';
-      this.lastRoute = 'guess/suspect';
-      this.nextRoute = 'guess/location';
-    },
-    location: () => {
-      this.options = LOCATIONS;
-      this.title = 'Selecione um Local';
-      this.lastRoute = 'guess/weapon';
-      this.nextRoute = 'guess/confirm';
-    },
-  };
+  public selectedSuspect!: Evidence;
+  public selectedWeapon!: Evidence;
+  public selectedLocation!: Evidence;
 
   public arrow: LucideIconData = ArrowLeft;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
+    const evidences: { [key: string]: () => void } = {
+      suspect: () => {
+        this.options = SUSPECTS;
+        this.title = 'Selecione um Suspeito';
+        this.lastRoute = 'list';
+        this.nextRoute = 'guess/weapon';
+      },
+      weapon: () => {
+        this.options = WEAPONS;
+        this.title = 'Selecione uma Arma';
+        this.lastRoute = 'guess/suspect';
+        this.nextRoute = 'guess/location';
+      },
+      location: () => {
+        this.options = LOCATIONS;
+        this.title = 'Selecione um Local';
+        this.lastRoute = 'guess/weapon';
+        this.nextRoute = 'guess/confirm';
+      },
+    };
+
     this.activatedRoute.params.subscribe((param) => {
-      const evidence = param['evidence'];
-      this.evidences[evidence]();
+      this.evidence = param['evidence'];
+      evidences[this.evidence]();
     });
   }
 
@@ -60,5 +66,24 @@ export class GuessComponent implements OnInit {
 
   public back() {
     this.router.navigateByUrl(this.lastRoute);
+  }
+
+  public selectOption(evidence: Evidence) {
+    const evidences: { [key: string]: () => void } = {
+      suspect: () => {
+        this.selectedSuspect = evidence;
+
+        this.options.forEach((suspect) => {
+          if (suspect.name !== evidence.name) {
+            console.log('Suspect', suspect);
+            suspect.checked = false;
+          }
+        });
+      },
+      weapon: () => (this.selectedWeapon = evidence),
+      location: () => (this.selectedLocation = evidence),
+    };
+
+    evidences[this.evidence]();
   }
 }
