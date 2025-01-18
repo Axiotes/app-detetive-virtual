@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { OptionComponent } from '../../components/option/option.component';
-import { Suspect } from '../../../../types/suspect.type';
+import { Suspect } from '../../../types/suspect.type';
 import { SUSPECTS } from '../../../../data/suspects.mock';
 import { WEAPONS } from '../../../../data/weapons.mock';
 import { LOCATIONS } from '../../../../data/locations.mock';

@@ -1,5 +1,5 @@
-@import "../../../../style/_mixins";
-@import "../../../../style/_variables";
+@import "../../../style/_mixins";
+@import "../../../style/_variables";
 
 :host {
   height: 100%;
@@ -37,25 +37,11 @@
     @include flex-center(column, 15px);
 
     &-guess {
-      width: 150px;
-      height: 35px;
-      color: white;
-      font-size: 16px;
-      background-color: $green;
-      border: none;
-      border-radius: 15px;
-      cursor: pointer;
+      @include button(150px, 35px, $green);
     }
 
     &-exit {
-      width: 85px;
-      height: 35px;
-      color: white;
-      font-size: 16px;
-      background-color: $red;
-      border: none;
-      border-radius: 15px;
-      cursor: pointer;
+      @include button(85px, 35px, $red);
     }
   }
 }

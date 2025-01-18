@@ -1,4 +1,4 @@
-import { Suspect } from '../types/suspect.type';
+import { Suspect } from '../src/types/suspect.type';
 
 export const SUSPECTS: Suspect[] = [
   { name: 'Sargento - Bigode', color: 'Peão Amarelo' },
