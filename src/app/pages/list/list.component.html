@@ -21,7 +21,9 @@
     ></app-option>
   </div>
   <div class="list__buttons">
-    <button class="list__buttons-guess">Fazer Palpite</button>
-    <button class="list__buttons-exit">Sair</button>
+    <button class="list__buttons-guess" (click)="makeGuess()">
+      Fazer Palpite
+    </button>
+    <button class="list__buttons-exit" (click)="exit()">Sair</button>
   </div>
 </main>
