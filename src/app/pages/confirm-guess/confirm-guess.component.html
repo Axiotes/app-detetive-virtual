@@ -1,0 +1,29 @@
+<main class="confirm">
+  <i-lucide class="confirm__icon" [img]="arrow" [size]="30"></i-lucide>
+
+  <div class="confirm__evidences">
+    <div class="confirm__evidences__evidence">
+      <h1>Suspeito</h1>
+      <p
+        class="confirm__evidences__evidence-name"
+        [innerHTML]="suspectName"
+      ></p>
+      <p
+        class="confirm__evidences__evidence-color"
+        [innerHTML]="suspectColor"
+      ></p>
+    </div>
+    <div class="confirm__evidences__evidence">
+      <h1>Arma</h1>
+      <p class="confirm__evidences__evidence-name" [innerHTML]="weapon"></p>
+    </div>
+    <div class="confirm__evidences__evidence">
+      <h1>Local</h1>
+      <p class="confirm__evidences__evidence-name" [innerHTML]="location"></p>
+    </div>
+  </div>
+
+  <div class="confirm__button">
+    <button>Confirmar</button>
+  </div>
+</main>

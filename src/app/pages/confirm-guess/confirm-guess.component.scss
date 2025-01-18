@@ -1,0 +1,34 @@
+@import "../../../style/_mixins";
+@import "../../../style/_variables";
+
+.confirm {
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+
+  &__icon {
+    color: $green;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__evidences {
+    &__evidence {
+      h1 {
+        font-size: 20px;
+        color: white;
+      }
+
+      &-name {
+        font-size: 14px;
+        color: white;
+      }
+
+      &-color {
+        font-size: 10px;
+        color: white;
+      }
+    }
+  }
+}
