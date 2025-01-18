@@ -1,0 +1,8 @@
+<main>
+  <h1 [innerHTML]="title"></h1>
+  <app-option
+    *ngFor="let option of options"
+    [name]="option"
+    [details]="option.color"
+  ></app-option>
+</main>
