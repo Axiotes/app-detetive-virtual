@@ -11,5 +11,5 @@ import { FormsModule } from '@angular/forms';
 export class OptionComponent {
   @Input() public name!: string;
   @Input() public details!: string;
-  @Input() public checked!: boolean;
+  @Input() public checked: boolean = false;
 }

@@ -3,6 +3,7 @@
 
 .option {
     width: 100%;
+    min-height: 30px;
     @include flex-center(row, 5px);
     justify-content: start;
 

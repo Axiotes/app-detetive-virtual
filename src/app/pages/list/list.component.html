@@ -1,3 +1,23 @@
 <main class="list">
-    <app-option></app-option>
+  <h1>Suspeitos</h1>
+  <div class="list__options">
+    <app-option
+      *ngFor="let suspect of suspects"
+      [name]="suspect.name"
+      [details]="suspect.color"
+    ></app-option>
+  </div>
+  <hr />
+  <h1>Armas</h1>
+  <div class="list__options">
+    <app-option *ngFor="let weapon of weapons" [name]="weapon"></app-option>
+  </div>
+  <hr />
+  <h1>Locais</h1>
+  <div class="list__options">
+    <app-option
+      *ngFor="let location of locations"
+      [name]="location"
+    ></app-option>
+  </div>
 </main>
